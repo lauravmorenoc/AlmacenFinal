@@ -24,5 +24,7 @@ public class Caja {
         this.productos = productos;
     }
     
-    
+    /*
+    prueba github
+    */
 }
