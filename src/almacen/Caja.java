@@ -15,6 +15,16 @@ public class Caja {
     public Caja(Producto[] productos) {
         this.productos = productos;
     }
+    
+    public int getEspaciosVacios(){
+        int espacios=0;
+        for(int i=0; i<7; i++){
+            if(productos[i]==null){
+                espacios++;
+            }
+        }
+        return espacios;
+    }
 
     public Producto[] getProductos() {
         return productos;

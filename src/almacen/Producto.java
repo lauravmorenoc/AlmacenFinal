@@ -10,7 +10,7 @@ import becker.robots.*;
  * @author Hernan Quiroga
  */
 public class Producto {
-    private String tipo;
+    private String tipo; //libro, electrodoméstico, juguete, ropa, joyas
     private double precio;
 
     public Producto(String tipo, double precio) {

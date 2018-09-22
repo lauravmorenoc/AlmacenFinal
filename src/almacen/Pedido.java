@@ -7,17 +7,26 @@ package almacen;
 
 /**
  *
- * @author Hernan Quiroga
+ * @author Laura Moreno, Hernan Quiroga
  */
 public class Pedido {
     private String cliente;
     private int cantidad;
-    private Producto[] producto;
+    private Producto producto;
 
-    public Pedido(String cliente, int cantidad, Producto[] producto) {
+    public Pedido(String cliente, int cantidad, Producto producto) {
         this.cliente = cliente;
         this.cantidad = cantidad;
         this.producto = producto;
+    }
+    
+    public void generarFactura(){
+        System.out.println("Factura del pedido");
+        System.out.println("Cliente: " + cliente);
+        System.out.println("Producto pedido: " + producto.getTipo());
+        System.out.println("Cantidad: " + cantidad);
+        System.out.println("Valor unitario: $" + producto.getPrecio());
+        System.out.println("Valor total compra: $" + producto.getPrecio()*cantidad);
     }
 
     public String getCliente() {
@@ -36,11 +45,11 @@ public class Pedido {
         this.cantidad = cantidad;
     }
 
-    public Producto[] getProducto() {
+    public Producto getProducto() {
         return producto;
     }
 
-    public void setProducto(Producto[] producto) {
+    public void setProducto(Producto producto) {
         this.producto = producto;
     }
     
